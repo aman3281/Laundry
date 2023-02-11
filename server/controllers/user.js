@@ -119,20 +119,21 @@ export const recoverPasswordEmail = async (req, res) => {
     console.log(url);
     // await sendEmail(user.email, "Password Reset", url);
 
-    const dataMail = {
-      from: "pranay2017raj@gmail.com",
-      to: `${user.email}`,
-      subject: "Recover Password",
-      text: ` ${user.email}, "Password Reset", ${url}`,
-    };
-    mg.messages().send(dataMail, function (error, body) {
-      if (error) console.log(error);
-      else console.log("successful");
-    });
+    // const dataMail = {
+    //   from: "kumaraman@gmail.com",
+    //   to: `${user.email}`,
+    //   subject: "Recover Password",
+    //   text: ` ${user.email}, "Password Reset", ${url}`,
+    // };
+    // mg.messages().send(dataMail, function (error, body) {
+    //   if (error) console.log(error);
+    //   else console.log("successful");
+    // });
 
-    res
-      .status(200)
-      .send({ message: "Password reset link sent to your email account" });
+    res.status(200).send({
+      data: url,
+      message: "Password reset link sent to your email account",
+    });
   } catch (error) {
     console.log(error);
     res.status(401).send({ message: "Internal Server Error" });

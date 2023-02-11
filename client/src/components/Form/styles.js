@@ -8,11 +8,11 @@ export default makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
+    // width: "25rem",
   },
   form: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center",
   },
   fileInput: {
     width: "97%",
@@ -23,5 +23,7 @@ export default makeStyles((theme) => ({
   },
   divBlock: {
     display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));

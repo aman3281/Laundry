@@ -24,14 +24,17 @@ const Auth = () => {
   const [formData, setFormData] = useState(initialState);
   const history = useHistory();
   const dispatch = useDispatch();
+  const [recoverPasswordLink, setRecoverPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
     try {
       const { data } = await emailSent(formData);
+      console.log(data, "data");
       alert(data.message, "Check Your Mail!!!");
-      history.push("/auth");
+      setRecoverPassword(data?.data);
+      // history.push("/auth");
     } catch (error) {
       alert("Some think went Wrong!!!");
     }
@@ -67,6 +70,9 @@ const Auth = () => {
           >
             {"Send Link"}
           </Button>
+          <div className={classes.link}>
+            Link: <a href={recoverPasswordLink}> {recoverPasswordLink}</a>
+          </div>
         </form>
       </Paper>
     </Container>

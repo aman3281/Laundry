@@ -48,4 +48,15 @@ export default makeStyles((theme) => ({
     width: "104%",
     padding: "5px",
   },
+  logout: {
+    // background: "red",
+    padding: "1rem",
+    borderRadius: "1rem",
+    marginLeft: ".5rem",
+    borderBottom: "2px solid Black",
+    "&:hover": {
+      background: "skyblue",
+      color: "white",
+    },
+  },
 }));

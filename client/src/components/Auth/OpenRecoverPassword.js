@@ -26,9 +26,10 @@ const Auth = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
+    console.log("hi");
+    e.preventDefault();
     if (formData.newPassword != formData.confirmPassword)
       alert("confirm Password Not Match!!!");
-    e.preventDefault();
     try {
       let url = window.location.href;
       let urlSplit = url.split("/");
@@ -38,6 +39,7 @@ const Auth = () => {
         urlSplit[5],
         formData
       );
+      console.log(changepass, "changepass");
       alert("Your Password has been Changed Successful!!!");
       history.push("/auth");
     } catch (e) {
@@ -51,9 +53,6 @@ const Auth = () => {
   return (
     <Container component="main" maxWidth="xs">
       <Paper className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOpenOutlined />
-        </Avatar>
         <Typography variant="h5">{"Recover Password"}</Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>

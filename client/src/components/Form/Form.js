@@ -118,7 +118,7 @@ const Form = ({ currentId, setCurrentId }) => {
         <Typography variant="h6">{"Creating a Laundry"}</Typography>
 
         <TextField
-          variant="outlined"
+          // variant="outlined"
           name="pickUpDate"
           type="date"
           fullWidth
@@ -132,35 +132,37 @@ const Form = ({ currentId, setCurrentId }) => {
           <Typography variant="h6">{"Top Wear"}</Typography>
           <TextField
             name="topWear"
-            variant="outlined"
-            label="Price"
+            // variant="outlined"
+            label="No of Item"
             type="number"
             onChange={topPriceHandler}
           />
-          <Typography variant="h6">{laundryData.topWearPrice}</Typography>
+          <Typography variant="h6">Rs {laundryData.topWearPrice}</Typography>
         </div>
 
         <div className={classes.divBlock}>
           <Typography variant="h6">{"Bottom Wear"}</Typography>
           <TextField
             name="bottomWear"
-            variant="outlined"
-            label="Price"
+            // variant="outlined"
+            label="No of Item"
             type="number"
             onChange={bottomWearPriceHandler}
           />
-          <Typography variant="h6">{laundryData.bottomWearPrice}</Typography>
+          <Typography variant="h6">Rs {laundryData.bottomWearPrice}</Typography>
         </div>
         <div className={classes.divBlock}>
           <Typography variant="h6">{"Woolen Wear"}</Typography>
           <TextField
             name="woolenWear"
-            variant="outlined"
-            label="Price"
+            // variant="outlined"
+            label="No of Item"
             type="number"
             onChange={woolenWearPriceHandler}
           />
-          <Typography variant="h6">{laundryData.woolenWearPrice}</Typography>
+          <br />
+          <br />
+          <Typography variant="h6">Rs {laundryData.woolenWearPrice}</Typography>
         </div>
         <div className={classes.divBlock}>
           {/* <Typography variant="h6">{"Total Price : Rs. "}</Typography> */}
@@ -171,7 +173,7 @@ const Form = ({ currentId, setCurrentId }) => {
         </div>
         <TextField
           name="contactPerson"
-          variant="outlined"
+          // variant="outlined"
           label="Contact Person"
           fullWidth
           value={laundryData.contactPerson}
@@ -179,7 +181,7 @@ const Form = ({ currentId, setCurrentId }) => {
         />
         <TextField
           name="description"
-          variant="outlined"
+          // variant="outlined"
           label="Description"
           fullWidth
           value={laundryData.description}

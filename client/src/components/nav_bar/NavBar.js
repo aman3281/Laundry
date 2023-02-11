@@ -61,33 +61,30 @@ const NavBar = () => {
           {user?.result ? (
             <>
               <div className={classes.profile}>
-                <Button
-                  variant="contained"
+                <Typography
+                  variant="h6"
                   className={classes.logout}
                   color="secondary"
                   onClick={dashboard}
-                  style={{ background: "purple" }}
                 >
                   Home
-                </Button>
-                <Button
-                  variant="contained"
+                </Typography>
+                <Typography
+                  variant="h6"
                   className={classes.logout}
                   color="secondary"
                   onClick={allRequest}
-                  style={{ background: "purple" }}
                 >
                   All Items
-                </Button>
-                <Button
-                  variant="contained"
+                </Typography>
+                <Typography
+                  variant="h6"
                   className={classes.logout}
                   color="secondary"
                   onClick={ChangePassword}
-                  style={{ background: "purple" }}
                 >
                   Change Password
-                </Button>
+                </Typography>
                 <Avatar
                   className={classes.purple}
                   alt={user?.result.name}
