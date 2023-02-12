@@ -18,6 +18,9 @@ const Home = () => {
   return (
     <Grow in>
       <Container>
+        <br />
+        <br />
+        <br />
         <Grid
           container
           justify="space-between"
@@ -25,10 +28,10 @@ const Home = () => {
           spacing={3}
         >
           <Grid item xs={12} sm={5}>
-            <Form currentId={currentId} setCurrentId={setCurrentId} />
+            {/* <Form currentId={currentId} setCurrentId={setCurrentId} /> */}
+            <LaundryPrice />
           </Grid>
           <Grid item xs={12} sm={7}>
-            <LaundryPrice />
             <Laundrys />
           </Grid>
         </Grid>

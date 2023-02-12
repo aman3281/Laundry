@@ -40,6 +40,8 @@ export default makeStyles((theme) => ({
   purple: {
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
+    marginLeft: "1rem",
+    marginRight: "1rem",
   },
   navDiv: {
     background: "white",
@@ -52,7 +54,10 @@ export default makeStyles((theme) => ({
     // background: "red",
     padding: "1rem",
     borderRadius: "1rem",
-    marginLeft: ".5rem",
+    marginLeft: "1.5rem",
+    marginRight: "-9rem",
+    // marginRight: "2rem",
+
     borderBottom: "2px solid Black",
     "&:hover": {
       background: "skyblue",

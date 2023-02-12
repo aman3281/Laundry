@@ -10,6 +10,7 @@ import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
 
 import React, { useEffect, useState } from "react";
+import ModelLaundry from "../Form/ModelLaundry";
 import classes from "./cssAdmin.module.css";
 // import { getStockItem } from "../../action/stock";
 const data = [
@@ -67,12 +68,10 @@ const LaundryPrice = () => {
 
   return (
     <>
-      <br />
-      <br />
-      <br />
       <Container className={classes.cont} style={{ borderRadius: "1.5rem" }}>
         <Typography variant="h6">Laundry Price</Typography>
-        <br />
+
+        <ModelLaundry />
         <Grid container spacing={2} className={classes.tabecont}>
           <TableContainer>
             <Table

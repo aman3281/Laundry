@@ -48,6 +48,13 @@ const NavBar = () => {
     // <AppBar className={classes.appBar} position="static" color="inherit">
     <div className={classes.navDiv}>
       <div className={classes.brandContainer}>
+        <Avatar
+          className={classes.purple}
+          alt={user?.result.name}
+          src={user?.result.imageUrl}
+        >
+          {user?.result.name.charAt(0).toUpperCase()}
+        </Avatar>
         <Typography
           component={Link}
           to="/"
@@ -85,16 +92,10 @@ const NavBar = () => {
                 >
                   Change Password
                 </Typography>
-                <Avatar
-                  className={classes.purple}
-                  alt={user?.result.name}
-                  src={user?.result.imageUrl}
-                >
-                  {user?.result.name.charAt(0)}
-                </Avatar>
-                <Typography className={classes.userName} variant="h6">
+
+                {/* <Typography className={classes.userName} variant="h6">
                   {user?.result.name}
-                </Typography>
+                </Typography> */}
                 <Button
                   variant="contained"
                   className={classes.logout}

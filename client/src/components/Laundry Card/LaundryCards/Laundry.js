@@ -38,7 +38,7 @@ const Post = ({ laundry }) => {
         {laundry.statusLaundry == 0 && "New Request"}
         {laundry.statusLaundry == 1 && "In Progress"}
         {laundry.statusLaundry == 2 && "Request Accept"}
-        {laundry.statusLaundry == 3 && "Finsh!"}
+        {laundry.statusLaundry == 3 && "Finish!"}
       </Typography>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
